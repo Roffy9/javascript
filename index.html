@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript DOM Lessons</title>
+</head>
+<body>
+
+<h1 id="myHeading">JavaScript DOM</h1>
+<p>Making a web page interactive.</p>
+<input type="text" id="myTextinput"/>
+<button id="myButton">change color heading</button>
+<script type="text/javascript">
+	const change = document.getElementById('myHeading');
+	change.addEventListener('click', () => {
+		change.style.color = 'lightblue';
+	});
+
+	const myButton = document.getElementById('myButton');
+	myButton.addEventListener('click', () => {
+		myHeading.style.backgroundColor = "blue";
+	});
+
+	const myTextinput = document.getElementById('myTextinput');
+		myButton.addEventListener('click', () => {
+			// myTextinput.textContent = myTextinput.value;
+			myHeading.style.backgroundColor = myTextinput.value;
+		});
+
+</script>
+
+</body>
+</html>

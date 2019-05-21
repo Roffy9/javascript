@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript DOM Lessons</title>
+</head>
+<body>
+
+<h1 id="myHeading">JavaScript DOM</h1>
+<p>Making a web page interactive.</p>
+
+<button id="toggleList">HideList</button>
+<div id="list">
+	<ul>
+		<li>Finance</li>
+		<li>Marketing</li>
+		<li>Sales</li>
+		<li>HR</li>
+		<li>Admin</li>
+		<li>IT</li>
+		<li>Network</li>
+	</ul>
+</div>
+<script type="text/javascript">
+	const list = document.querySelector('list');
+	const button = document.getElementById('toggleList');
+	button.addEventListener('click', () => {
+		list.style.display = 'none';
+	});
+</script>
+</body>
+</html>

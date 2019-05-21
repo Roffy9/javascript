@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript DOM Lessons</title>
+</head>
+<body>
+
+<h1 id="myHeading">JavaScript DOM</h1>
+<p>Making a web page interactive.</p>
+<input type="text" class="change">
+<button id="changeButton">ChangeHeading</button>
+	<ul id="myList">
+		<li>Finance</li>
+		<li>Marketing</li>
+		<li>Sales</li>
+		<li>HR</li>
+		<li>Admin</li>
+		<li>IT</li>
+		<li>Network</li>
+	</ul>
+	<input type="text" class="addItemInput"/>
+	<button id="addItemButton">Add Item Button</button>
+
+	<script type="text/javascript">
+	const myList = document.getElementsByTagName('li');
+	for(let i = 0; i<myList.length; i += 1) {
+		myList[i].style.color = "lightsteelblue";
+	}
+
+	const p = document.getElementById('myHeading');
+	const input = document.querySelector('input');
+	const changeButton = document.getElementById('changeButton');
+	changeButton.addEventListener('click', () => {
+		myHeading.textContent = input.value;
+	});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript DOM Lessons</title>
+</head>
+<body>
+
+<h1 id="myHeading">JavaScript DOM</h1>
+<p>Making a web page interactive.</p>
+	<ul>
+		<li class="error-not-type">Finance</li>
+		<li>Marketing</li>
+		<li class="error-not-type">Sales</li>
+		<li>HR</li>
+		<li class="error-not-type">Admin</li>
+		<li>IT</li>
+		<li class="error-not-type">Network</li>
+	</ul>
+<script type="text/javascript">
+	const myList = document.getElementsByClassName('error-not-type');
+	for(let i = 0; i<myList.length; i += 1) {
+		myList[i].style.color = "red";
+	}
+
+	//you will write document.querySelctor
+	const querySelctor = document.querySelectorAll('.error-not-type');
+	for(let i = 0; i<querySelctor.length; i += 1) {
+		querySelctor[i].style.backgroundColor = "green";
+	}
+	document.querySelector('p').style.backgroundColor = "lightblue";
+</script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Window Object</title>
+</head>
+<body>
+	<h3>Window Object Section</h3>
+	<button onclick="windowSize()">Window Size</button> <br/>
+	<button onclick="screenSize()">Screen Size</button> <br/>
+	<button onclick="getavailSize()">Avaialbale Screen Size</button> <br/>
+	<button onclick="getColorDepth()">Get color Depth</button> <br/>
+	<button onclick="getPixelDepth()">Get Pixel Depth</button> <br/>
+	<button onclick="windowLocation()">Current Window Location</button> <br/>
+	<button onclick ="windowassign()"> Loading new document</button> <br/>
+	<button type="button" onclick="forceReload();">Reload Page</button> </br>
+	<button type="button" onclick="checkconnection()">Check connection</button>
+	<button type="button" onclick="checkcookie()"> Check cookies</button>
+
+	<script type="text/javascript">
+		function windowSize() {
+			const w = window.innerWidth;
+			const h = window.innerHeight;
+			alert(" Width: " + w + " , " + " Height: " + h);
+		}
+		// function windowSize(){
+		// 	const w = document.documentElement.clientWidth;
+		// 	const h = document.documentElement.clientHeight;
+		// 	alert("Width: " + w + " , " + "Height: " + h);
+		// }
+
+		function screenSize() {
+			alert("This is window screen Size: " + screen.width + "x"+ screen.height);
+		}
+
+		function getavailSize() {
+			alert("Availbale screen size width: " + screen.availWidth +"," + " height: " + screen.availHeight);
+		}
+
+		function getColorDepth() {
+			alert("Your screen color depth is: " + screen.colorDepth);
+		}
+		function getPixelDepth() {
+			alertI("Your screen Pixel is: " + screen.pixelDepth);
+		}
+		function windowLocation() {
+			alert('This is current window location : ' + window.location.href)
+		}
+		// document.write(window.location.protocol);
+
+		document.write(window.location.host);
+
+		document.write(window.location.port);
+
+		// document.write(window.location.pathname);
+
+		document.write(window.location.search);
+
+		document.write(window.location.hash);
+
+		//you can use replace()
+		function windowassign() {
+			window.location.assign("https://www.tutorialrepublic.com");
+		}
+		//reload page
+		function forceReload() {
+    		window.location.reload(true);
+		}
+
+		//browser histroy all pages
+		alert("You've accessed " + history.length + " web pages in this ");
+		function goBack() {
+    		window.history.back();
+		}
+		function checkconnection() {
+			if(navigator.onLine) {
+				alert("Application is online");
+			} else {
+				alert("Application is offline");
+			}
+		}
+
+		function checkcookie() {
+			if(navigator.cookieEnabled) {
+				alert("Cookies are enable in your brwoser");
+			}
+			else {
+				alert("Cookies are disable in your browser");
+			}
+		}
+			/*
+			alert(navigator.language);
+			alert(navigator.appName);
+			alert(navigator.appVersion);
+			alert(navigator.userAgent);
+			alert(navigator.platform);
+			*/
+			// var name = prompt('What is your name ?');
+			// if(name.length > 0 && name != null)
+			// {
+			// 	alert('Hello ' + name);
+			// }
+			// else {
+			// 	alert('Your dog!? ha ha');
+			// }
+	</script>
+</body>
+</html>

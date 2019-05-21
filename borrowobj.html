@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Call Mehthod</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var objA = {
+			name : "Object A",
+			say : function(greet) {
+				alert(greet+ "," + this.name);
+			}
+		}
+		objA.say('HI');
+		document.write("<br/>");
+		var objB = {
+			name : "Object B"
+		}
+		objA.say.call(objB, "Hello");
+	</script>
+</body>
+</html>

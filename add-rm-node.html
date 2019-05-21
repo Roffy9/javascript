@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="myList">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+
+<p>Click the button to append an item to the end of the list.</p>
+
+<button onclick="myFunction()">Add new</button>
+<button onClick = "removeFunction()"> Remove </button>
+
+<script>
+function myFunction() {
+const node = document.createElement('LI');
+const textnode = document.createTextNode('Beer');
+node.appendChild(textnode);
+document.getElementById('myList').appendChild(node);
+}
+function removeFunction() {
+const list = document.getElementById('myList');
+list.removeChild(list.childNodes[0]);
+}
+
+document.addEventListener('click', (event) => {
+	console.log(event.target)
+});
+</script>
+
+<p><strong>Note:</strong><br>First create an LI node,<br> then create a Text node,<br> then append the Text node to the LI node.<br>Finally append the LI node to the list.</p>
+
+</body>
+</html>
